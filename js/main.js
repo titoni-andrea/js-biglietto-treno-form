@@ -1,4 +1,6 @@
-const bottoneForm = document.getElementById("bottone-form")
+let ageUser = document.getElementById("select-eta").value;
+
+const bottoneForm = document.getElementById("bottone")
     
 
 bottoneForm.addEventListener("click", function () {
@@ -6,34 +8,60 @@ bottoneForm.addEventListener("click", function () {
     let NumKm = document.getElementById("km").value;
     let ageUser = document.getElementById("select-eta").value;
 
-    let costKm = 0.21
+    let costKm = 0.21;
 
-    let costTicket = NumKm * costKm
+    let costTicket = NumKm * costKm;
 
-    const senzaDato = "Devi inserire tutti i dati nel form per avere il  prezzo del tuo biglietto!"
+    const senzaDato = "Devi inserire tutti i dati nel form per avere il  prezzo del tuo biglietto!";
 
-    // console.log(`Il costo base del biglietto è: ${costTicket.toFixed(2)}€`)
+    // console.log(`Il costo base del biglietto è: ${costTicket.toFixed(2)}€`);
 
     if (NumKm == 0 || NumKm == null) {
-        console.log(senzaDato)
+        alert(senzaDato);
     }
 
-    else if (ageUser == 0 || ageUser == null) {
-        console.log(senzaDato)
+    else if (ageUser == 0 || ageUser == null || ageUser == "placeholder") {
+        alert(senzaDato);
     }
 
     else if (nomeUtente == 0 || nomeUtente == null) {
-        console.log(senzaDato)
+        alert(senzaDato);
     }
 
     else if (ageUser == "Minorenne") {
-        console.log(`Il costo del biglietto per te che sei minorenne è: ${(costTicket - ((costTicket / 100) * 20)).toFixed(2)}€`)
+        document.getElementById("tipo-ticket").innerHTML = "Per te che sei MINORENNE c'è uno sconto del 20%!";
+        document.getElementById("costo-ticket").innerHTML = `${(costTicket * 0.8).toFixed(2)}€`;
+        document.getElementById("offerta").innerHTML = "Sconto Minorenne";
+        document.getElementById("num-treno").innerHTML = Math.floor(Math.random() * 90000 + 10000);
+        document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 9 + 1);
+        document.getElementById("nome-ticket").innerHTML = nomeUtente
+
+        document.getElementById("name").value = ""
+        document.getElementById("km").value = ""
+        document.getElementById("select-eta").value = ""
     }
     else if (ageUser == "Senior") {
-        console.log(`Il costo del biglietto per te che hai più di 65 anni è: ${(costTicket - ((costTicket / 100) * 40)).toFixed(2)}€`)
+        document.getElementById("tipo-ticket").innerHTML = "Per te che sei SENIOR c'è uno sconto del 40%!";
+        document.getElementById("costo-ticket").innerHTML = `${(costTicket * 0.6).toFixed(2)}€`;
+        document.getElementById("offerta").innerHTML = "Sconto Senior";
+        document.getElementById("num-treno").innerHTML = Math.floor(Math.random() * 90000 + 10000);
+        document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 9 + 1);
+        document.getElementById("nome-ticket").innerHTML = nomeUtente
+
+        document.getElementById("name").value = ""
+        document.getElementById("km").value = ""
+        document.getElementById("select-eta").value = ""
     }
     else {
-        console.log(`Il costo del biglietto intero è: ${costTicket.toFixed(2)}€`)
+        document.getElementById("costo-ticket").innerHTML = `${costTicket}€`;
+        document.getElementById("offerta").innerHTML = "Prezzo Intero";
+        document.getElementById("num-treno").innerHTML = Math.floor(Math.random() * 90000 + 10000);
+        document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 9 + 1);
+        document.getElementById("nome-ticket").innerHTML = nomeUtente
+
+        document.getElementById("name").value = ""
+        document.getElementById("km").value = ""
+        document.getElementById("select-eta").value = ""
     }
 })
 

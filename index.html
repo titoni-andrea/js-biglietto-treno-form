@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,61 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+    <h1 id="titolo">TRENITALIA</h1>
+
+    <div class="cont-flex">
+        <div class="info-user">
+
+            <h2 class="sottotitolo">Info biglietto</h2>
+
             <label for="name"><strong>Nome</strong></label>
             <input type="text" id="name" name="name" placeholder="Es: Andrea Titoni" />
 
-            <label for="km"><strong>Km</strong></label>
-            <input type="text" id="km" name="km" placeholder="Es: 100"/>
+            <label for="km"><strong>Km da percorrere</strong></label>
+            <input type="text" id="km" name="km" placeholder="Es: 100" />
 
             <label for=""><strong>Età</strong></label>
             <select name='select-eta' id="select-eta">
+                <option value='placeholder'>Seleziona una fascia d'età</option>
                 <option value='Minorenne'>Minorenne</option>
                 <option value='Intero'>Intero</option>
-                <option value='Senior'>Senior</option>
+                <option value='Senior'>Over 65</option>
             </select>
 
-            <button id="bottone-form">INVIA</button>
-
+            <button id="bottone">INVIA</button>
+        </div>
+        <div class="cont-ticket">
+            <h2 class="sottotitolo">Biglietto</h2>
+            <h3 id="tipo-ticket">prova</h3>
+            <div class="ticket">
+                <div class="info-ticket">
+                    <h3 class="titoletto">Nome</h3>
+                    <p class="txt-biglietto" id="nome-ticket"></p>
+                </div>
+                <div class="info-ticket">
+                    <h3 class="titoletto">Carrozza</h3>
+                    <p class="txt-biglietto" id="carrozza"></p>
+                </div>
+                <div class="info-ticket">
+                    <h3 class="titoletto">Num. Treno</h3>
+                    <p class="txt-biglietto" id="num-treno"></p>
+                </div>
+                <div class="info-ticket">
+                    <h3 class="titoletto">Offerta</h3>
+                    <p class="txt-biglietto" id="offerta"></p>
+                </div>
+                <div class="info-ticket">
+                    <h3 class="titoletto">Costo biglietto</h3>
+                    <p class="txt-biglietto" id="costo-ticket"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>

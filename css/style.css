@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(237, 175, 61);
+}
+
+#titolo {
+    text-align: center;
+    padding-top: 40px;
+    color: rgb(246, 218, 167);
+    font-size: 60px;
+}
+
+.sottotitolo {
+    padding-top: 20px;
+    color: rgb(237, 175, 61);
+    text-align: center;
+    font-size: 30px;
+}
+
+.cont-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.info-user {
+    background-color: rgb(246, 218, 167);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+label {
+    text-align: center;
+    padding-top: 20px;
+    color: #222;
+}
+
+input {
+    width: 50%;
+    margin: 10px 0px;
+    background-color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+select {
+    width: 50%;
+    margin: 10px 0px;
+    background-color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#bottone {
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 30px;
+    color: #222;
+    font-weight: bold;
+    font-size:17px;
+    border: solid 2px white;
+    box-shadow: 0px 0px 13px 0.1px rgb(121, 119, 117);
+}
+
+#bottone:hover {
+    border: solid 2px #222;
+}
+
+#bottone:active {
+    background-color: #222;
+    color: white;
+}
+
+.cont-ticket {
+    width: 75%;
+    padding: 20px;
+    background-color: rgb(246, 218, 167);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cont-ticket .sottotitolo {
+    padding: 0px;
+}
+
+.ticket {
+    display: flex;
+    background-color: white;
+    width: 87%;
+    border-radius: 8px;
+    justify-content: space-between;
+
+}
+
+.info-ticket {
+padding: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.info-ticket:last-child {
+    background-color: rgb(246, 249, 95);
+    border-radius: 0px 8px 8px 0px;
+}
+
+.titoletto {
+    padding-bottom: 15px;
+}
+
+.txt-biglietto {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}

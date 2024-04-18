@@ -9,16 +9,19 @@
 </head>
 <body>
             <label for="name"><strong>Nome</strong></label>
-            <input type="text" id="name" name="name" size="10" placeholder="Es. Andrea" />
+            <input type="text" id="name" name="name" placeholder="Es: Andrea Titoni" />
 
-            <label for="cognome"><strong>Cognome</strong></label>
-            <input type="text" id="cognome" name="cognome" size="10" placeholder="Es. Titoni"/>
+            <label for="km"><strong>Km</strong></label>
+            <input type="text" id="km" name="km" placeholder="Es: 100"/>
 
-            <select name='frutto'>
-                <option value='A'>Maggiorenne</option>
-                <option value='B'>Minorenne</option>
-                <option value='C'>Senior</option>
+            <label for=""><strong>Età</strong></label>
+            <select name='select-eta' id="select-eta">
+                <option value='Minorenne'>Minorenne</option>
+                <option value='Intero'>Intero</option>
+                <option value='Senior'>Senior</option>
             </select>
+
+            <button id="bottone-form">INVIA</button>
 
 
     <script type="text/javascript" src="js/main.js"></script>

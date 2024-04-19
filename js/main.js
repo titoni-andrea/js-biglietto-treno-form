@@ -1,7 +1,5 @@
-let ageUser = document.getElementById("select-eta").value;
-
 const bottoneForm = document.getElementById("bottone")
-    
+
 
 bottoneForm.addEventListener("click", function () {
     let nomeUtente = document.getElementById("name").value;
@@ -53,7 +51,8 @@ bottoneForm.addEventListener("click", function () {
         document.getElementById("select-eta").value = ""
     }
     else {
-        document.getElementById("costo-ticket").innerHTML = `${costTicket}€`;
+        document.getElementById("tipo-ticket").innerHTML = "";
+        document.getElementById("costo-ticket").innerHTML = `${costTicket.toFixed(2)}€`;
         document.getElementById("offerta").innerHTML = "Prezzo Intero";
         document.getElementById("num-treno").innerHTML = Math.floor(Math.random() * 90000 + 10000);
         document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 9 + 1);
